@@ -59,3 +59,6 @@ select name,submittime from enterprise where submittime between date_sub(now(),i
 查询上个月的数据 
 select name,submittime from enterprise where date_format(submittime,'%Y-%m')=date_format(DATE_SUB(curdate(), INTERVAL 1 MONTH),'%Y-%m') 
 
+注意：
+MySQL 的 YEARWEEK 是获取年份和周数的一个函数，函数形式为 YEARWEEK(date[,mode]) ；
+统计数据库内一周数据时用到 yearweek 函数，查询出来的结果与预期值有较大差距， 原来mysql默认 周日当做一周开始，修改成周一当做开始需要在yearweek函数后的model里面填值1即可 
