@@ -1,9 +1,4 @@
 
-SELECT * FROM `h_info_list` WHERE UNIX_TIMESTAMP(okdata)>=UNIX_TIMESTAMP('2018-09-10') and UNIX_TIMESTAMP(okdata)<=(UNIX_TIMESTAMP('2018-09-17')-1) and groupid in(9,38)  and arcrank > -2 AND ok_doc NOT IN(31,43) AND scores=1 
-
-SELECT * FROM `h_info_list` WHERE YEARWEEK(date_format(okdata,'%Y-%m-%d')) = (YEARWEEK(now())-1) and groupid in(9,38)  and arcrank > -2 AND ok_doc NOT IN(31,43) AND scores=1 
-
-
 上周
 YEARWEEK(date_format(submittime,'%Y-%m-%d')) = YEARWEEK(now())-1
 
